@@ -1,35 +1,35 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically handle the form submission
-    console.log('Form submitted:', formData)
+    console.log("Form submitted:", formData);
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    })
-  }
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="min-h-screen py-16">
@@ -46,7 +46,9 @@ export default function Contact() {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Contact Information */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Contact Information
+            </h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
@@ -66,9 +68,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="mt-1 text-gray-600">
-                    [Your Phone Number]
-                  </p>
+                  <p className="mt-1 text-gray-600">+255 692 402 480</p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
                   <p className="mt-1 text-gray-600">
-                    [Your Email Address]
+                    mubixcompanylimited@gmail.com
                   </p>
                 </div>
               </div>
@@ -89,11 +89,12 @@ export default function Contact() {
                   <span className="text-2xl">⏰</span>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
+                  <h3 className="text-lg font-medium text-gray-900">
+                    Business Hours
+                  </h3>
                   <p className="mt-1 text-gray-600">
-                    Monday - Friday: 8:00 AM - 6:00 PM<br />
-                    Saturday: 9:00 AM - 2:00 PM<br />
-                    Sunday: Closed
+                    Monday - Sunday: 24 Hours
+                    <br />
                   </p>
                 </div>
               </div>
@@ -102,10 +103,15 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Send us a Message
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Name
                 </label>
                 <input
@@ -120,7 +126,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Email
                 </label>
                 <input
@@ -135,7 +144,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Phone
                 </label>
                 <input
@@ -149,7 +161,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Message
                 </label>
                 <textarea
@@ -176,5 +191,5 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}
